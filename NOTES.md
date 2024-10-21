@@ -16,6 +16,12 @@ Examples
 "[(])"     =>  False
 "[({})](]" =>  False
 
-🤲 Test if string is NOT empty
-    - "(){}[]" --> true
-    - "" --> false
+✅ Test if string is NOT empty
+    ✅ - "(){}[]" --> true
+    ✅ - "" --> false
+
+🤲 Test if string contains right characters that represent a brace
+    - ( --> true
+    - { --> true
+    - [ --> true
+    - > --> false
