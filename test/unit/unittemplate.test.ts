@@ -10,17 +10,21 @@ describe("There is need to determine the order of the braces. Braces have differ
     });
   });
   describe("Second thing to do if to validate the right formats that represent the braces", () => {
-    it("( --> true", () => {
+    it("( / )--> true", () => {
       expect(isCharacterValid("(")).toBe(true);
+      expect(isCharacterValid(")")).toBe(true);
     });
-    it("{ --> true", () => {
+    it("{ / }--> true", () => {
       expect(isCharacterValid("{")).toBe(false);
+      expect(isCharacterValid("}")).toBe(false);
     });
-    it("[ --> true", () => {
+    it("[ / ]--> true", () => {
       expect(isCharacterValid("[")).toBe(true);
+      expect(isCharacterValid("]")).toBe(true);
     });
-    it("> --> false", () => {
+    it("> / & --> false", () => {
       expect(isCharacterValid(">")).toBe(false);
+      expect(isCharacterValid("&")).toBe(false);
     });
   });
 });

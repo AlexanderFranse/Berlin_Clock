@@ -3,5 +3,6 @@ export function isStringNotEmpty(x: string) {
 }
 
 export function isCharacterValid(x: string) {
-  return null;
+  const validCharacters = new Set(["(", ")", "[", "]"]);
+  return validCharacters.has(x);
 }
