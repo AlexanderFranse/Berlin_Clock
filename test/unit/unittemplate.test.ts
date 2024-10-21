@@ -5,5 +5,8 @@ describe("There is need to determine the order of the braces. Braces have differ
     it("(){}[] --> true", () => {
       expect(isStringNotEmpty("(){}[]")).toBe(true);
     });
+    it(" '' --> false", () => {
+      expect(isStringNotEmpty("")).toBe(false);
+    });
   });
 });
