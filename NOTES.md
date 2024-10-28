@@ -20,8 +20,26 @@ Examples
     ✅ - "(){}[]" --> true
     ✅ - "" --> false
 
-🤲 Test if string contains right characters that represent a brace
+ 
+ ✅Test if string contains right characters that represent a brace
     - ( --> true
+    - ) --> true
     - { --> true
+    - } --> true
     - [ --> true
+    - ] --> true
     - > --> false
+
+✅ Test if a brace contains a closing brace with the right symbol
+    - () --> true
+    - (} --> false
+
+✅ Refactor function that validates the order of the braces
+
+🤲 Test endproduct:
+    "(){}[]"   =>  True
+    "([{}])"   =>  True
+    ""         =>  False
+    "(}"       =>  False
+    "[(])"     =>  False
+    "[({})](]" =>  False
